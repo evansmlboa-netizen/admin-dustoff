@@ -6,6 +6,7 @@ import {
   MapPin, Settings2, Gift, HeadphonesIcon, User, LogOut, Sparkles, Menu, X
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { useState } from "react";
 
 const navItems = [
@@ -97,6 +98,7 @@ const PortalLayout = () => {
           </div>
           <div className="hidden lg:block" />
           <div className="flex items-center gap-3">
+            <ThemeToggle />
             <span className="text-sm text-muted-foreground hidden sm:block">Hi, {user.name}</span>
             <div className="h-8 w-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">
               {user.name.charAt(0).toUpperCase()}
